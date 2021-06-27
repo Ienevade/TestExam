@@ -31,14 +31,13 @@ def main():
 @app.route('/ready', methods=['post'])
 def ready():
     nums = []
+    session.permanent = False
     if 'firtrue' not in session:
         firtrue = 100
         sectrue = 100
 
         session['firtrue'] = firtrue
         session['sectrue'] = sectrue
-
-
 
     if 'history1' in session:
 
@@ -101,7 +100,7 @@ def commit():
             print(session['numhis'])
 
         for i in range(len(session['nums'])):
-            print('check', request.form['Number'],'and',session['nums'][i])
+            print('check', request.form['Number'], 'and', session['nums'][i])
             if int(request.form['Number']) == int(session['nums'][i]):
                 if i == 0:
                     session['firtrue'] += 1
@@ -126,9 +125,8 @@ def commit():
     print(len(history2))
 
     return render_template('main.html', spirit=False, his1=history1, his2=history2, numhis=session['numhis'],
-                           ran=len(history2), message=message,firtrue=session['firtrue'],
+                           ran=len(history2), message=message, firtrue=session['firtrue'],
                            sectrue=session['sectrue'])
-
 
 # if __name__ == "__main__":
 #     app.run(debug=True)
