@@ -38,8 +38,7 @@ def ready():
         session['firtrue'] = firtrue
         session['sectrue'] = sectrue
 
-    for i in range(0, 2):
-        nums.append(random.randint(10, 99))
+
 
     if 'history1' in session:
 
@@ -54,6 +53,8 @@ def ready():
         session['numhis'] = []
 
     if not session['flag_ready']:
+        for i in range(0, 2):
+            nums.append(random.randint(10, 99))
         history1.append(nums[0])
         history2.append(nums[1])
 
