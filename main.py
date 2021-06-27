@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, session
 import random
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='Templates/')
 app.config['SECRET_KEY'] = '467d4dc4eef096f79f88523dfd8fbe661a2c437c'
 
 
