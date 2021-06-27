@@ -52,7 +52,7 @@ def ready():
 
     if 'numhis' not in session:
         session['numhis'] = []
-        
+
     if not session['flag_ready']:
         history1.append(nums[0])
         history2.append(nums[1])
@@ -98,7 +98,7 @@ def commit():
             numhis = []
             session['numhis'] = numhis.append(request.form['Number'])
             print(session['numhis'])
-            session['flag_ready'] = False
+
         for i in range(len(session['nums'])):
             print('check', request.form['Number'],'and',session['nums'][i])
             if int(request.form['Number']) == int(session['nums'][i]):
@@ -112,6 +112,7 @@ def commit():
                 else:
                     session['sectrue'] -= 1
         message = 'Загадайте новое число'
+        session['flag_ready'] = False
 
     elif not session['flag_ready']:
         message = 'Для начала загадайте число'
