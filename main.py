@@ -7,6 +7,8 @@ app.config['SECRET_KEY'] = '467d4dc4eef096f79f88523dfd8fbe661a2c437c'
 
 @app.route('/')
 def main():
+    if 'flag_ready' in session:
+        session['flag_ready'] = False
     if 'firtrue' not in session:
         firtrue = 100
         sectrue = 100
