@@ -1,0 +1,53 @@
+<p>&nbsp;</p>
+<h3 style="text-align: center; color: #3f7320;"></h3>
+<p></p>
+<p style="text-align: right;"></p>
+<form action="/ready" method="post">
+<p><strong>&nbsp;<input type='submit' value="Придумал"></strong></p>
+</form>
+<table border="1" style="height: 62px; width: 40.1617%; border-collapse: collapse; margin-left: auto; margin-right: auto;" height="47">
+<tbody>
+    <tr>
+        <td style="width: 50%;">Достоверность первого</td>
+        <td style="width: 50%;">Достоверность второго</td>
+    </tr>
+    <tr>
+        <td style="width: 50%;">{{firtrue}}</td>
+        <td style="width: 50%;">{{sectrue}}</td>
+    </tr>
+</tbody>
+</table>
+{{message}}
+<form action="/commit" method="post">
+<p><input maxlength="2" name="Number" size="5" type="text" />&nbsp;&nbsp;</p>
+{%if spirit%}
+{{nums[0]}} {{nums[1]}}
+{%endif%}
+<p><strong><input type='submit' value="Отправить число"></strong></p>
+</form>
+<table border="1" class="demoTable" style="height: 63px; width: 867px;" width="881">
+<thead>
+<tr>
+<td style="width: 33%;">История введёных чисел</td>
+<td style="width: 33%;">История ответов первого</td>
+<td style="width: 33%;">История ответов Второго</td>
+</tr>
+</thead>
+<tbody>
+
+
+    {% for i in range(ran)  %}
+    {%if his1[i]%}
+<tr>
+<td style="width: 273.158px;">{{numhis[i]}}</td>
+<td style="width: 273.126px;">{{his1[i]}}</td>
+<td style="width: 273.196px;">{{his2[i]}}</td></tr>
+    {%endif%}
+
+    {%endfor%}
+
+
+
+</tbody>
+</table>
+<p></p>
