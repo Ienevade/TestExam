@@ -23,7 +23,7 @@ def main():
     if 'numhis' not in session:
         session['numhis'] = []
 
-    return render_template('Main.html', spirit=False, his1=history1, his2=history2, numhis=session['numhis'],
+    return render_template('main.html', spirit=False, his1=history1, his2=history2, numhis=session['numhis'],
                            ran=len(history2), messsage='Теперь введите двузначное число', firtrue=session['firtrue'],
                            sectrue=session['sectrue'])
 
@@ -64,7 +64,7 @@ def ready():
     print(len(history2))
 
     session['flag_ready'] = True
-    return render_template('Main.html', spirit=True, nums=nums, his1=history1, his2=history2, numhis=session['numhis'],
+    return render_template('main.html', spirit=True, nums=nums, his1=history1, his2=history2, numhis=session['numhis'],
                            ran=len(history2), message='Теперь введите число', firtrue=session['firtrue'],
                            sectrue=session['sectrue'])
 
@@ -122,7 +122,7 @@ def commit():
     history2 = session['history2']
     print(len(history2))
 
-    return render_template('Main.html', spirit=False, his1=history1, his2=history2, numhis=session['numhis'],
+    return render_template('main.html', spirit=False, his1=history1, his2=history2, numhis=session['numhis'],
                            ran=len(history2), message=message,firtrue=session['firtrue'],
                            sectrue=session['sectrue'])
 
