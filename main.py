@@ -52,9 +52,10 @@ def ready():
 
     if 'numhis' not in session:
         session['numhis'] = []
-
-    history1.append(nums[0])
-    history2.append(nums[1])
+        
+    if not session['flag_ready']:
+        history1.append(nums[0])
+        history2.append(nums[1])
 
     session['history1'] = history1
     session['history2'] = history2
