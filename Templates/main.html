@@ -2,7 +2,7 @@
 <h3 style="text-align: center; color: #3f7320;"></h3>
 <p></p>
 <p style="text-align: right;"></p>
-<form action="/ready" method="post">
+<form action="/" method="post">
 <p><strong>&nbsp;<input type='submit' value="Придумал"></strong></p>
 </form>
 <table border="1" style="height: 62px; width: 40.1617%; border-collapse: collapse; margin-left: auto; margin-right: auto;" height="47">
@@ -18,11 +18,13 @@
 </tbody>
 </table>
 {{message}}
-<form action="/commit" method="post">
+<form action="/" method="post" >
 <p><input maxlength="2" name="Number" size="5" type="text" />&nbsp;&nbsp;</p>
 {%if spirit%}
 {{nums[0]}} {{nums[1]}}
 {%endif%}
+
+
 <p><strong><input type='submit' value="Отправить число"></strong></p>
 </form>
 <table border="1" class="demoTable" style="height: 63px; width: 867px;" width="881">
