@@ -2,7 +2,7 @@ from flask.views import MethodView
 from flask import render_template, Flask, request, session
 import random
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='Templates/')
 
 app.config['SECRET_KEY'] = '467d4dc1eef096f79f88522dfd8fbe661a1c437c'
 
