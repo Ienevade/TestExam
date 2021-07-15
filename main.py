@@ -4,7 +4,7 @@ import random
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = '467d4dc4eef096f79f88522dfd8fbe661a1c437c'
+app.config['SECRET_KEY'] = '467d4dc1eef096f79f88522dfd8fbe661a1c437c'
 
 
 class ShowUsers(MethodView):
@@ -122,4 +122,4 @@ class ShowUsers(MethodView):
 
 app.add_url_rule('/', view_func=ShowUsers.as_view('show_users'))
 
-app.run(debug=True)
+# app.run(debug=True)
